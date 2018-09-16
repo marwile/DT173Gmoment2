@@ -13,6 +13,7 @@ Har valt paket från npm.com och utgått ifrån att de som är relativt nyuppdat
 * gulp-imagemin komprimerar bilder
 
 ## Systemet & tasks
+
 Arbetsfilerna finns i mappp src, består av html filer och undermappar för JavaScript, bilder och CSS. Automatiseringsprocessen används för att vid uppdateringar i arbetsfilerna kopieras och uppdateras även automatiskt filer färdiga för publicering till mapp pub. Tasks körs för bearbetning av materialet till pub.
 * tasks 
   *  copyhtml - kopierar html filer och placerar dem i mapp för publicering 
@@ -20,4 +21,6 @@ Arbetsfilerna finns i mappp src, består av html filer och undermappar för Java
   *  convertjs - slår samman js filer och minifierar dem 
   *  convertcss - komprimerar och slår samman css filer
   *  watcher - lyssnar efter ändringar som görs och uppdaterar då 
+  ### Starta upp
+  Git clone  och installera gulp lokalt i projektet med npm install gulp, kör gulp.
 
