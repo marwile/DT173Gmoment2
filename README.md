@@ -1,5 +1,7 @@
-# DT173Gmoment2
-Gulp &amp; NodeJs
+# DT173Gmoment2 & 3
+Gulp &amp; NodeJs & SASS
+
+# Har skapat .scss filer för att använda sass som sedan konverteras till css
 
 ## Automatiseringsprocessens syfte
 Syftet är att förenkla utvecklingsarbetet genom att en del uppgifter utförs automatiskt.
