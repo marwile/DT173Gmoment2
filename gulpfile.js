@@ -10,8 +10,17 @@ const concatcss = require("gulp-concat-css");
 const cleancss = require("gulp-clean-css");
 //compress images
 const compress = require("gulp-imagemin");
+//sass 
+const sass = require("gulp-sass");
 
-
+//sass 
+gulp.task("sass", function(){
+    return gulp.src("src/sass/*.scss")
+    .pipe(sass())
+    .pipe(concatcss("main.min.css"))
+    .pipe(cleancss())
+    .pipe(gulp.dest("pub/css"));
+});
 
 //copy html files from src to pub
 gulp.task("copyhtml",function(){
@@ -35,20 +44,10 @@ gulp.task("convertjs", function(){
 
 });
 
-//minify and concat css files
-gulp.task("convertcss", function(){
-    return gulp.src("src/css/*.css")
-    .pipe(concatcss("main.min.css"))
-    .pipe(cleancss())
-    .pipe(gulp.dest("pub/css"))
-
-});
-
-
 //control changes in files
 gulp.task("watcher", function(){
     gulp.watch("src/js/*.js", ["convertjs"]);
-    gulp.watch("src/css/*.css", ["convertcss"]);
+    gulp.watch("src/sass/*.scss", ["sass"]);
     gulp.watch("src/*.html", ["copyhtml"]);
     gulp.watch("src/images/*", ["convertimages"]);
 
@@ -57,4 +56,4 @@ gulp.task("watcher", function(){
 
 
 //default gulp to run tasks and watch changes
-gulp.task("default",["copyhtml", "convertjs","convertcss", "convertimages", "watcher"]);
+gulp.task("default",["copyhtml", "convertjs","sass", "convertimages", "watcher"]);
