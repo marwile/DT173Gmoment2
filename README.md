@@ -24,5 +24,5 @@ Arbetsfilerna finns i mappp src, består av html filer och undermappar för Java
   *  convertcss - komprimerar och slår samman css filer
   *  watcher - lyssnar efter ändringar som görs och uppdaterar då 
   ### Starta upp
-  Git clone https://github.com/marwile/DT173Gmoment2.git  och installera gulp lokalt i projektet med npm install gulp, kör gulp.
+  Git clone https://github.com/marwile/DT173Gmoment2-3.git och installera gulp lokalt i projektet med npm install gulp, kör gulp.
 
